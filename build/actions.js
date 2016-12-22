@@ -21,10 +21,10 @@ var loadTranslations = exports.loadTranslations = function loadTranslations(tran
 var SET_LOCALE = exports.SET_LOCALE = 'setLocal';
 var setLocale = exports.setLocale = function setLocale(locale) {
   return function (dispatch) {
-    _index.I18n.forceComponentsUpdate();
     dispatch({
       type: SET_LOCALE,
       locale: locale
     });
+    _index.I18n.forceComponentsUpdate();
   };
 };
